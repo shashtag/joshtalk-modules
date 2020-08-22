@@ -68,7 +68,7 @@ h2 {
   align-content: center;
 }
 
-.num_tiles {
+.num_tiles, .ini_tiles {
   border-radius: 1rem;
   width: auto;
   height: auto;
@@ -81,3 +81,4 @@ h2 {
   margin: 3px;
   vertical-align: center;
 }
+
