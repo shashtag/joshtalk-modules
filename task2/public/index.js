@@ -11,6 +11,15 @@ var display_str = "";
 var display_div = document.getElementById("display_div_id");
 
 function incrementCount(current_count) {
+  setTimeout(function(){
+    for (var i = 0; i <10; i++) {
+      var new_span = document.createElement("span");
+      new_span.className = "ini_tiles";
+      new_span.innerText = Math.floor(Math.random()*8)+1;
+      display_div.appendChild(new_span);
+    }
+  },300);
+
   setInterval(function () {
     while (display_div.hasChildNodes()) {
       display_div.removeChild(display_div.lastChild);
@@ -31,6 +40,7 @@ function incrementCount(current_count) {
       str_counter_2.toString() +
       str_counter_1.toString() +
       str_counter_0.toString();
+      
     for (var i = 0; i < display_str.length; i++) {
       var new_span = document.createElement("span");
       new_span.className = "num_tiles";
@@ -42,6 +52,9 @@ function incrementCount(current_count) {
     }
   }, 1000);
 }
+
+
+
 
 // var tile1 = "#box-1";
 // var tile2 = "#box-2";
@@ -77,18 +90,5 @@ function incrementCount(current_count) {
 //       $(element).text("0");
 //     });
 //   }, 2000);
-//   window.setTimeout(incrementCount(),3000);
 // });
 
-// function incrementCount() {
-//   var counter =  0;
-//   for(var i=0; i<100;i++) {
-//     var arr = [];
-//     counter++;
-//     var arr = (""+counter).split("");
-//     console.log(arr);
-//     for(var j=0;j<arr.length;j++){
-//       $(tile1).text(arr[j]);
-//     }
-//   }
-// }
