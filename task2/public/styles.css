@@ -1,0 +1,80 @@
+body {
+  background-color: rgb(253, 253, 253);
+  overflow-x: hidden;
+  margin: 2rem 4rem;
+  padding: auto;
+  font-family: "Montserrat", sans-serif;
+}
+.heading {
+  text-align: center;
+}
+.heading h1 {
+  color: rgb(93, 93, 255);
+  font-size: 33pt;
+  font-weight: 1000;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+h2 {
+  font-weight: bold;
+  margin: 5rem 1rem 1rem 1rem;
+  font-size: 20pt;
+  white-space: nowrap;
+}
+.center p {
+  font-weight: 1000;
+  font-size: 30pt;
+  padding-left: 100px;
+}
+.center {
+  padding: 1rem;
+  text-align: center;
+}
+.attribute1,
+.attribute2,
+.attribute3 {
+  color: rgb(255, 186, 57);
+  margin: none;
+}
+.dot-separator {
+  padding: 0rem 70px 0 100px;
+  color: rgb(255, 186, 57);
+  font-weight: 100;
+  font-size: 100pt;
+}
+
+/* prototype */
+.main_container {
+  position:relative;
+  height: auto;
+  width: auto;
+  padding: 1rem;
+  margin: 2rem 0 2rem 21rem;
+  background-color: #ffffff;
+  align-content: center;
+}
+
+.container_inner {
+  height: auto;
+  border: none;
+  background-color: #ffffff;
+  vertical-align: center;
+  padding-top: 12px;
+  padding-left: 10px;
+  align-content: center;
+}
+
+.num_tiles {
+  border-radius: 1rem;
+  width: auto;
+  height: auto;
+  background-color: #1d59ff;
+  color: #ffffff;
+  font-size: 50pt;
+  text-align: center;
+  line-height: 20px;
+  padding: 1rem;
+  margin: 3px;
+  vertical-align: center;
+}
