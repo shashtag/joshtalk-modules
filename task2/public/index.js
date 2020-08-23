@@ -27,10 +27,10 @@ function animateValue(id, start, duration) {
   }, stepTime);
 }
 setTimeout(animateValue(elm, 0, 100), 100);
-setTimeout(fade_out, 1680);
+setTimeout(fade_out, 1580);
 
 function fade_out() {
-  $("#mydiv").fadeOut().empty();
+  $("#mydiv").fadeOut();
 }
 function incrementCount(current_count) {
   // setTimeout(function(){
@@ -41,7 +41,7 @@ function incrementCount(current_count) {
   //     display_div.appendChild(new_span);
   //   }
   // },400);
-
+  id_main_container
   setInterval(function () {
     while (display_div.hasChildNodes()) {
       display_div.removeChild(display_div.lastChild);
