@@ -81,4 +81,14 @@ h2 {
   margin: 3px;
   vertical-align: center;
 }
-
+#mydiv h1{
+  font-size: 50pt;
+  border-radius:1rem;
+  background-color: #1d59ff;
+  color:white;
+}
+.number-animation{
+  display:inline;
+  letter-spacing:10px;
+  
+}
