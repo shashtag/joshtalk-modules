@@ -9,16 +9,38 @@ var str_counter_2 = counter_list[2];
 var str_counter_3 = counter_list[3];
 var display_str = "";
 var display_div = document.getElementById("display_div_id");
+let elm = document.querySelector(".number-animation");
 
-function incrementCount(current_count) {
-  setTimeout(function(){
-    for (var i = 0; i <10; i++) {
-      var new_span = document.createElement("span");
-      new_span.className = "ini_tiles";
-      new_span.innerText = Math.floor(Math.random()*8)+1;
-      display_div.appendChild(new_span);
+function animateValue(id, start, duration) {
+  let end = parseInt(elm.innerText);
+  let range = end - start;
+  let current = start;
+  let increment = end > start ? 8888888 : -1;
+  let stepTime = Math.abs(Math.floor(duration / range));
+  let obj = elm;
+  let timer = setInterval(function () {
+    current += increment;
+    obj.innerHTML = current;
+    if (current == end) {
+      clearInterval(timer);
     }
-  },300);
+  }, stepTime);
+}
+setTimeout(animateValue(elm, 0, 100), 100);
+setTimeout(fade_out, 1680);
+
+function fade_out() {
+  $("#mydiv").fadeOut().empty();
+}
+function incrementCount(current_count) {
+  // setTimeout(function(){
+  //   for (var i = 0; i <10; i++) {
+  //     var new_span = document.createElement("span");
+  //     new_span.className = "ini_tiles";
+  //     new_span.innerText = Math.floor(Math.random()*8)+1;
+  //     display_div.appendChild(new_span);
+  //   }
+  // },400);
 
   setInterval(function () {
     while (display_div.hasChildNodes()) {
@@ -40,7 +62,7 @@ function incrementCount(current_count) {
       str_counter_2.toString() +
       str_counter_1.toString() +
       str_counter_0.toString();
-      
+
     for (var i = 0; i < display_str.length; i++) {
       var new_span = document.createElement("span");
       new_span.className = "num_tiles";
@@ -50,11 +72,8 @@ function incrementCount(current_count) {
       new_span.innerText = display_str[i];
       display_div.appendChild(new_span);
     }
-  }, 1000);
+  }, 1500);
 }
-
-
-
 
 // var tile1 = "#box-1";
 // var tile2 = "#box-2";
@@ -91,4 +110,3 @@ function incrementCount(current_count) {
 //     });
 //   }, 2000);
 // });
-
